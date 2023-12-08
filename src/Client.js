@@ -5,14 +5,14 @@ class Client{
     this.create();
   }
   create(){
-    this.process = spawn('python3', ['./src/python/Client.py']);
+    this.process = spawn('python', ['./src/python/Client.py']);
     this.process.stdout.on('end', function(){
       console.log('client process ended');
     });
   }
   async getDialogs(){
     return new Promise((resolve, reject) => {
-      const script = spawn('python3', ['./src/python/getDialogs.py']);
+      const script = spawn('python', ['./src/python/getDialogs.py']);
       script.stdout.on('data', function(data){
         try {
           const dialogs = JSON.parse(data.toString());
@@ -24,7 +24,7 @@ class Client{
     })
   }
   redirectPreviousMessages(origin, destination){
-    const script = spawn('python3', ['./src/python/redirectPreviousMessages.py'], { env: { 
+    const script = spawn('python', ['./src/python/redirectPreviousMessages.py'], { env: { 
       'ORIGIN': origin, 
       "DESTINATION": destination 
     }});
