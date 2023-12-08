@@ -8,6 +8,14 @@
         {
             "src": "/src/python/*.py",
             "use": "@vercel/python"
+        },
+        {
+            "src": "/src/*.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "/src/*/*.js",
+            "use": "@vercel/node"
         }
     ]
     }
