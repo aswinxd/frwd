@@ -6,7 +6,7 @@
   "scripts": {
     
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm install && pip -r requirements.txt",
+    "install": "npm install",
     "start": "node index.js",
     "release": "standard-version"
     
