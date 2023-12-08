@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "*.js":{
+      "memory": 1024
+    },
+    "src/*.js": {
+      "memory": 1024
+      
+    }
+  }
+}
