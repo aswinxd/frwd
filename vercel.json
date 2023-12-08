@@ -4,7 +4,7 @@
         {
             "src": "./index.js",
             "use": "@vercel/node"
-        }
+        },
         {
             "src": "/src/python/*.py",
             "use": "@vercel/python"
